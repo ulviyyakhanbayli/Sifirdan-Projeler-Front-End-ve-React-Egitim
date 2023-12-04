@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="tr" data-theme="dark">
+<html lang="tr" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
     
-    <nav>
+    <nav class="container-fluid">
         <ul>
           <li><strong>Brand</strong></li>
         </ul>
@@ -19,29 +20,44 @@
         </ul>
     </nav>
     <div>
-        <aside>
-            <ul>
-                <li>Lorem, ipsum dolor.</li>
-                <li>Inventore, quaerat repudiandae!</li>
-                <li>Doloribus, nam explicabo?</li>
-                <li>Dolore, voluptatem odit?</li>
-                <li>Obcaecati, at error?</li>
-            </ul>
-        </aside>
-        <article>
-            <details open>
-                <summary>Accordion 1</summary>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit vel perspiciatis quo natus molestiae fugit excepturi sunt delectus non alias. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio nesciunt consectetur optio amet ad voluptate?</p>
-            </details>
-              
-            <details>
-                <summary>Accordion 2</summary>
-                <ul>
-                  <li>Lorem ipsum dolor sit amet.</li>
-                  <li>Lorem ipsum dolor sit amet.</li>
-                </ul>
-            </details>
-        </article>
+        <main class="container">
+            <div class="grid">
+                <div>
+                    <article>
+                        <img class="card-image" src="images/1.jpg">
+                        <footer>Footer</footer>
+                    </article>
+                </div>
+                <div>
+                    <article>
+                        <img class="card-image" src="images/2.jpg">
+                        <footer>Footer</footer>
+                    </article>
+                </div>
+                <div>
+                    <article>
+                        <img class="card-image" src="images/3.jpg">
+                        <footer>Footer</footer>
+                    </article>
+                </div>
+            </div>
+
+            <article>
+                <details open>
+                    <summary>Accordion 1</summary>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit vel perspiciatis quo natus molestiae fugit excepturi sunt delectus non alias. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio nesciunt consectetur optio amet ad voluptate?</p>
+                </details>
+                  
+                <details>
+                    <summary>Accordion 2</summary>
+                    <ul>
+                      <li>Lorem ipsum dolor sit amet.</li>
+                      <li>Lorem ipsum dolor sit amet.</li>
+                    </ul>
+                </details>
+            </article>
+            
+        </main>
     </div>
 </body>
 </html>
