@@ -8,19 +8,131 @@
     --light-white: #ecf0f1;
     --silver: #bdc3c7;
 
+    --box-size: 900px;
+
     --bg-color: var(--light-white);
-    --text-color: var(--blue);
-    --body-color: var(white);
+    --text-color: var(--midnight-blue);
+    --body-color: white;
+    --link-color: var(--blue);
+    --link-color-hover: var(--dark-blue);
 }
 
-:root [data-theme="dark"] {
+:root[data-theme="dark"] {
     --body-color: var(--midnight-blue);
     --bg-color: var(--dark-blue);
     --text-color: var(--light-white);
 }
 
+/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+/* HELPER */
+.clear-fix {
+    clear: both;
+}
+
+body{
+    background-color: var(--body-color);
+    color: var(--text-color);
+}
+
+/* GENERAL */
+header, 
+main {
+    background-color: var(--bg-color);
+    min-height: 20px;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+/* NAV */
+header > nav {
+    width: var(--box-size);
+    margin: 0 auto;
+}
+
+header > nav > ul {
+    float: left;
+    list-style: none;
+}
+
+header > nav > ul:last-of-type {
+    float: right;
+}
+
+header > nav > ul > li {
+    float: left;
+    margin-right: 10px;
+}
+
+header > nav > ul > li > a {
+    text-decoration: none;
+    color: var(--link-color);
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+header > nav > ul > li > a:hover {
+    color: var(--link-color-hover);
+    background-color: var(--silver);
+}
+
+header > nav > ul > li:last-child > a {
+    background-color: var(--blue);
+    color: var(--bg-color);
+}
+
+header > nav > ul > li:last-child > a:hover {
+    background-color: var(--dark-blue);
+    color: var(--blue);
+}
+
+/* MAIN */
+main {
+    width: var(--box-size);
+    margin: 0 auto;
+    min-height: 600px;
+    border: 1px solid var(--silver);
+    border-radius: 4px;
+    padding: 20px;
+}
+
+
+
+/* ASIDE */
+aside, section {
+    float: left;
+}
+
+aside {
+    width: 30%;
+    padding: 20px;
+}
+
+aside > ul {
+    list-style: none;
+}
+
+aside > ul > li{
+    margin-bottom: 10px;
+}
+
+aside > ul > li > a {
+    color: var(--link-color);
+    padding: 6px 10px;
+    text-decoration: none;
+    display: block;
+}
+
+aside > ul > li > a:hover {
+    color: var(--text-color);
+}
+
+/* SECTION */
+section {
+    width: 70%;
 }
